@@ -1,0 +1,17 @@
+digraph g {
+__start0 [label="" shape="none"];
+c0 [shape="circle" margin=0 label="c0"];
+c1 [shape="circle" margin=0 label="c1"];
+c2 [shape="circle" margin=0 label="c2"];
+c4 [shape="circle" margin=0 label="c4"];
+s0 [shape="circle" margin=0 label="s0"];
+c0 -> c1 [label="press? if true {c0} "];
+c1 -> c0 [label="release? if c0 < 5 {c0} "];
+c1 -> c2 [label="starthold! if c0 >= 10 {c0} "];
+c1 -> s0 [label="release? if c0 >= 5 {} "];
+c2 -> c4 [label="release? if true {c0} "];
+c4 -> c0 [label="endhold! if true {c0} "];
+s0 -> c0 [label="touch! if true {} "];
+__start0 -> c0;
+}
+

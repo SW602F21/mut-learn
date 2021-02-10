@@ -1,0 +1,18 @@
+digraph g {
+__start0 [label="" shape="none"];
+c0 [shape="circle" margin=0 label="c0"];
+c1 [shape="circle" margin=0 label="c1"];
+c2 [shape="circle" margin=0 label="c2"];
+c3 [shape="circle" margin=0 label="c3"];
+c4 [shape="circle" margin=0 label="c4"];
+c5 [shape="circle" margin=0 label="c5"];
+c0 -> c1 [label="start? if true {c0} "];
+c1 -> c2 [label="appr! if c0 >= 5 {c0} "];
+c2 -> c3 [label="enter! if c0 >= 10 {c0} "];
+c2 -> c4 [label="stop? if true {c0} "];
+c3 -> c0 [label="leave! if c0 >= 3 {} "];
+c4 -> c5 [label="go? if true {c0} "];
+c5 -> c3 [label="enter! if c0 >= 7 {c0} "];
+__start0 -> c0;
+}
+

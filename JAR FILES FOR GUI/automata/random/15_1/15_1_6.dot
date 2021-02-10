@@ -1,0 +1,37 @@
+digraph g {
+__start0 [label="" shape="none"];
+s0 [shape="circle" margin=0 label="s0"];
+s1 [shape="circle" margin=0 label="s1"];
+s2 [shape="circle" margin=0 label="s2"];
+s3 [shape="circle" margin=0 label="s3"];
+s4 [shape="circle" margin=0 label="s4"];
+s5 [shape="circle" margin=0 label="s5"];
+s6 [shape="circle" margin=0 label="s6"];
+s7 [shape="circle" margin=0 label="s7"];
+s8 [shape="circle" margin=0 label="s8"];
+s9 [shape="circle" margin=0 label="s9"];
+s10 [shape="circle" margin=0 label="s10"];
+s11 [shape="circle" margin=0 label="s11"];
+s12 [shape="circle" margin=0 label="s12"];
+s13 [shape="circle" margin=0 label="s13"];
+s14 [shape="circle" margin=0 label="s14"];
+s0 -> s4 [label="in2? if c0 >= 10 {} "];
+s1 -> s7 [label="in0? if true {} "];
+s1 -> s3 [label="in1? if c0 < 10 {} "];
+s2 -> s8 [label="out0! if true {c0} "];
+s3 -> s10 [label="in0? if c0 >= 12 {c0} "];
+s4 -> s1 [label="out2! if true {c0} "];
+s5 -> s11 [label="out1! if true {} "];
+s6 -> s13 [label="in3? if c0 <= 14 {} "];
+s6 -> s6 [label="in4? if c0 <= 2 {c0} "];
+s7 -> s5 [label="out4! if true {} "];
+s8 -> s0 [label="in3? if true {} "];
+s9 -> s2 [label="in4? if true {c0} "];
+s10 -> s9 [label="out3! if true {} "];
+s11 -> s14 [label="in2? if c0 < 15 {c0} "];
+s11 -> s6 [label="in1? if true {} "];
+s12 -> s7 [label="in3? if c0 > 15 {c0} "];
+s13 -> s12 [label="in1? if c0 >= 9 {} "];
+s14 -> s12 [label="in3? if c0 >= 11 {} "];
+__start0 -> s0;
+}
